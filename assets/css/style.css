@@ -55,7 +55,7 @@ header .nav-link{
     background-image: url(../images/banner-img-new.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 180px 0 950px;
+    padding: 320px 0 950px;
     position: relative;
 }
 .banner-heading{
@@ -141,7 +141,7 @@ header .nav-link{
 }
 .box-content p{
     color: #484848;
-    font-size: 30px;
+    font-size: 24px;
     font-style: normal;
     line-height: 1.6;
 }
@@ -204,10 +204,10 @@ header .nav-link{
 }
 .strategic-content p{
     color: #333;
-    font-size: 24px;
+    font-size: 20px;
+    line-height: 30px;
     font-style: normal;
     font-weight: 400;
-    line-height: 176.6%;
     letter-spacing: 0.48px;
     margin-bottom: 40px;
 }
@@ -241,10 +241,10 @@ header .nav-link{
 }
 .vision-box ul li, .vision-box p{
     color: #333;
-    font-size: 24px;
+    font-size: 20px;
+    line-height: 30px;
     font-style: normal;
     font-weight: 400;
-    line-height: 36px;
     max-width: 500px;
 }
 .vision-box ul li{
@@ -305,11 +305,11 @@ header .nav-link{
 
 .slider-single h3 {
     color: #3259AE;
-    font-size: 40px;
+    font-size: 32px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-    margin: 26px 0;
+    margin: 26px 0 18px 0;
 }
 .slider-single p{
     color: #FFF;
@@ -326,6 +326,7 @@ header .nav-link{
 }
 .team-slider .read-more{
     color: #fff;
+    font-size: 20px;
 }
 .team-slider::before{
     content: '';
@@ -345,9 +346,14 @@ header .nav-link{
     position: relative;
     padding: 60px 0px 0px 60px;
     margin-bottom: 100px;
+    overflow: hidden;
+}
+.slider-nav .slick-list{
+    margin-right: -5px;
 }
 .team-heading{
     color: #F2F3F5;
+    margin-bottom: 30px !important;
 }
 .slider-single{
     padding-bottom: 120px;
@@ -398,6 +404,11 @@ header .nav-link{
 .form-img{
     max-width: fit-content !important;
 }
+.form-img img{
+    height: 100%;
+    width: inherit;
+    border-radius: 5px;
+}
 .form-main{
     max-width: 800px !important;
     margin-top: 10px !important;
@@ -422,10 +433,10 @@ header .nav-link{
     overflow: hidden;
 }
 .form-sec .secondary-heading{
-    padding-bottom: 70px;
+    padding-bottom: 20px;
 }
 .secondary-heading{
-    font-size: 54px;
+    font-size: 50px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
@@ -469,6 +480,7 @@ header .nav-link{
     letter-spacing: 0.72px;
     min-width: 230px;
     height: 64px;
+    transition: all 0.2s;
 }
 #footer{
     margin-top: 100px;
@@ -558,14 +570,15 @@ header .nav-link{
     font-weight: 500;
     text-decoration: none;
     line-height: normal;
+    transition: all 0.2s;
     letter-spacing: 1.213px;
 }
 #footer .address{
     color: #FFF;
-    font-size: 18px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 500;
-    line-height: 195.775%;
+    line-height: 180%;
     letter-spacing: 1.213px;
     max-width: 290px;
     margin-top: 70px;
@@ -586,7 +599,7 @@ header .nav-link{
 }
 .terms-condition{
     color: #779DF2;
-    font-size: 18px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 500;
     line-height: 195.775%;
@@ -599,10 +612,11 @@ header .nav-link{
 .footer-bottom-mail p a{
     text-decoration: none;
     color: #212121;
+    transition: all 0.2s;
 }
 .footer-bottom-mail p{
     color: #212121;
-    font-size: 24px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
@@ -641,10 +655,24 @@ header .nav-link{
 .terms-menu li a{
     color: #779DF2;
     transition: all 0.2s;
-    font-size: 18px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 500;
     line-height: 195.775%;
     letter-spacing: 1.213px;
     text-decoration: none;
+}
+.contact-btn:hover, .theme-btn:hover{
+    background: #3259aee0 !important;
+}
+.footer-bottom-mail p a:hover, .footer-inner-col ul li a:hover{
+    color: #3259AE;
+    text-decoration: underline;
+}
+.slider-nav .slick-current .custom-slide{
+    filter: grayscale(0);
+}
+.slider-nav .custom-slide{
+    filter: grayscale(100);
+    /* transition: all 0.2s; */
 }
