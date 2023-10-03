@@ -15,6 +15,9 @@ header.sticky_header .nav-link{
     background-color: #fff !important;
     box-shadow: 0 0 27px rgb(0 0 0 / 20%);
 }
+header.sticky_header .nav-link:hover{
+    color: #3259AE !important;
+}
 header .nav-link{
     text-transform: uppercase;
     color: #F2F3F5 !important;
@@ -219,9 +222,13 @@ header .nav-link{
     line-height: 176.6%;
     letter-spacing: 0.48px;
     text-decoration: none;
+    transition: all 0.2s;
 }
 .read-more:hover svg{
     margin-left: 10px;
+}
+.team-slider .read-more:hover, .read-more:hover{
+    color: #3259AE;
 }
 .read-more svg{
     transition: all 0.2s;
