@@ -19,6 +19,8 @@ jQuery(document).ready(function() {
     $(".slider-single").slick({
         slidesToShow: 1,
         slidesToScroll: 1,
+        infinite: true,
+        cssEase: 'linear',
         prevArrow: '<button class="slick-prev slick-arrow"></button>',
         nextArrow: '<button class="slick-next slick-arrow"></button>',
         fade: true,
@@ -26,12 +28,51 @@ jQuery(document).ready(function() {
         asNavFor: ".slider-nav"
       });
       $(".slider-nav").slick({
-        slidesToShow: 3,
+        slidesToShow: 2.99,
         slidesToScroll: 1,
         asNavFor: ".slider-single",
         dots: false,
         arrows: false,
-        focusOnSelect: true
+        responsive: [
+            {
+              breakpoint: 1441,
+              settings: {
+                slidesToShow: 2
+              }
+            },
+            {
+              breakpoint: 992,
+              settings: {
+                slidesToScroll: 3
+              }
+            },
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 2
+              }
+            },
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 1,
+                adaptiveHeight: true
+              }
+            }
+
+        ]
       });
       
+});
+
+
+jQuery('.read-more').each(function() {
+    jQuery(this).on('click', function() {
+        jQuery(this).parent('.slick-slide').find('.more__text').slideToggle();
+        if (jQuery(this).find('span').text() == "Read more") {
+            jQuery(this).find('span').text("Read less")
+        } else {
+            jQuery(this).find('span').text("Read more")
+        }
+    });
 });
