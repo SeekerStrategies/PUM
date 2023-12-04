@@ -7,6 +7,18 @@
 .sticky_header .logo {
     width: 150px;
 }
+.logo {
+    width: 220px;
+}
+.footer-logo {
+    width: 270px;
+    display: block;
+    margin: 0 auto;
+}
+.logo img, .footer-logo img {
+    width: 100%;
+    height: auto;
+}
 header.sticky_header .nav-link{
     color: #000000 !important;
 }
