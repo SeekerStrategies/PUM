@@ -965,6 +965,7 @@ header .nav-link{
     }
     .team-slider img {
         max-height: inherit;
+        height: 430px;
     }
     footer .footer-bottom-mail{
         text-align: left !important;
