@@ -967,6 +967,9 @@ header .nav-link{
         max-height: inherit;
         height: 430px;
     }
+    .footer-logo {
+        width: 200px;
+     }
     footer .footer-bottom-mail{
         text-align: left !important;
     }
