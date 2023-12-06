@@ -1,5 +1,9 @@
 *{
-    font-family: 'ClashDisplay-Variable';
+    font-family: var(--bodyFont);
+}
+body{
+    --headingFont: 'Arapey', serif;
+    --bodyFont: 'Lato', sans-serif;
 }
 .container{
     max-width: 1800px !important;
@@ -9,6 +13,19 @@
 }
 .logo {
     width: 220px;
+}
+.logo {
+    opacity: 0;
+    visibility: hidden;
+}
+.sticky_header .logo {
+    opacity: 1;
+    visibility: visible;
+}
+.banner-heading img {
+    max-width: 550px;
+    height: auto;
+    width: 100%;
 }
 .footer-logo {
     width: 270px;
@@ -33,16 +50,17 @@ header.sticky_header .nav-link:hover{
 header .nav-link{
     text-transform: uppercase;
     color: #F2F3F5 !important;
-    font-weight: 400;
+    font-weight: 700;
     padding-left: 30px !important;
+}
+.btn, .contact-btn {
+    font-weight: 700 !important;
 }
 .contact-btn{
     background-color: #3259AE !important;
     border-color: #3259AE !important;
     text-transform: uppercase;
     font-size: 16px !important;
-    font-style: normal;
-    font-weight: 500 !important;
     line-height: normal !important;
     letter-spacing: 0.72px;
     min-width: 190px;
@@ -134,10 +152,10 @@ header .nav-link{
 }
 .primary-heading{
     font-size: 80px;
-    font-style: normal;
     font-weight: 500;
     line-height: 88px;
-    letter-spacing: 2.4px;
+    font-family:var(--headingFont);
+    text-transform: uppercase;
     margin-bottom: 0;
 }
 .about-content h2{
@@ -166,6 +184,7 @@ header .nav-link{
     font-style: normal;
     font-weight: 700;
     margin-bottom: 24px;
+    font-family: var(--headingFont);
 }
 .box-content p b{
     font-weight: 600;
@@ -220,15 +239,14 @@ header .nav-link{
 .what-we-do{
     padding: 130px 0 100px;
 }
-.sec-tagline{
+.sec-tagline {
     color: #3259AE;
     font-size: 32px;
-    font-style: normal;
     font-weight: 600;
     line-height: normal;
-    letter-spacing: 3.2px;
     text-transform: uppercase;
-    margin-bottom: 17px;
+    margin-bottom: 5px;
+    font-family: var(--bodyFont);
 }
 .strategic-content{
     padding-top: 60px;
@@ -441,11 +459,11 @@ header .nav-link{
 }
 .secondary-heading{
     font-size: 50px;
-    font-style: normal;
     font-weight: 600;
     line-height: normal;
-    letter-spacing: 2.16px;
-    margin-bottom: 0;
+    letter-spacing: 0;
+    font-family: var(--headingFont);
+    text-transform: uppercase;
 }
 .form-main label{
     color: #000;
@@ -478,10 +496,9 @@ header .nav-link{
     background: #3259AE !important;
     color: #FDFDFD !important;
     font-size: 18px !important;
-    font-style: normal;
-    font-weight: 600 !important;
+    font-weight: 700 !important;
+    text-transform: uppercase;
     line-height: normal !important;
-    letter-spacing: 0.72px;
     min-width: 230px;
     height: 64px;
     transition: all 0.2s;
@@ -571,9 +588,8 @@ header .nav-link{
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
-    letter-spacing: 1px;
     margin: 20px auto 0;
-    max-width: 290px;
+    max-width: 260px;
 }
 .logo-column {
     margin-bottom: 15px;
@@ -641,7 +657,6 @@ header .nav-link{
     font-size: 16px;
     font-weight: 500;
     line-height: 24px;
-    letter-spacing: 1px;
     text-decoration: none;
     display: block;
 }
@@ -703,6 +718,9 @@ header .nav-link{
 @media only screen and (max-width:1440px){
     .team-slider img {
         height: 640px;
+    }
+    .banner-heading img {
+        max-width: 500px;
     }
 }
 @media only screen and (max-width:1380px){
@@ -834,6 +852,9 @@ header .nav-link{
     .vision-box ul li {
         padding: 0 20px 0 0;
     }
+    .banner-heading img {
+        max-width: 400px;
+    }
 }
 @media only screen and (max-width:992px){
     .slider-nav .slick-list {
@@ -856,9 +877,6 @@ header .nav-link{
     .team-slider {
         padding-bottom: 70px;
     }
-    header .nav-link{
-        padding-left: 0 !important;
-    }
     .form-sec{
         margin-bottom: 0 !important;
     }
@@ -872,6 +890,40 @@ header .nav-link{
     }
     .team-slider img {
         max-height: 500px;
+    }
+    .logo {
+        width: 100px;
+    }
+    #top-menu.navbar-light .navbar-toggler-icon{
+        background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='white' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+    }
+    .sticky_header #top-menu.navbar-light .navbar-toggler-icon{
+        background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='rgba%2850, 89, 180%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+    }
+    #top-menu.navbar-light .navbar-toggler{
+        padding: 0;
+        border: none;
+        outline: none !important;
+        box-shadow: none !important;
+    }
+    .sticky_header .navbar{
+        padding: 10px 30px !important;
+    }
+    #top-menu {
+        padding: 20px 30px;
+    }
+    ul.navbar-nav{
+        padding-bottom: 30px;
+        padding-top: 20px;
+    }
+    header .nav-link {
+        padding-left:0px !important;
+    }
+    .navbar-collapse {
+        background: #fff;
+    }
+    .navbar-collapse .nav-link {
+        color: #000000 !important;
     }
 }
 @media only screen and (max-width:900px){
@@ -913,22 +965,6 @@ header .nav-link{
         min-width: 180px;
         height: 54px;
     }
-    .sticky_header .navbar{
-        padding: 10px 30px !important;
-    }
-    #top-menu {
-        padding: 20px 30px;
-    }
-    #top-menu.navbar-light .navbar-toggler{
-        padding: 0;
-        border: none;
-        outline: none !important;
-        box-shadow: none !important;
-    }
-    ul.navbar-nav{
-        padding-bottom: 30px;
-        padding-top: 20px;
-    }
     /* #collapsibleNavbar ul.navbar-nav{
         position: absolute;
         top: 0;
@@ -937,12 +973,6 @@ header .nav-link{
         z-index: -1;
         background-color: #ffffff;
     } */
-    #top-menu.navbar-light .navbar-toggler-icon{
-        background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='white' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
-    }
-    .sticky_header #top-menu.navbar-light .navbar-toggler-icon{
-        background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='rgba%2850, 89, 180%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
-    }
 }
 @media only screen and (max-width: 800px){
     .banner-content-main {
@@ -1088,5 +1118,8 @@ header .nav-link{
     }
     .sec-tagline{
         font-size: 20px;
+    }
+    .banner-heading img {
+        max-width: 250px;
     }
 }

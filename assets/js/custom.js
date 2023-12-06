@@ -1,19 +1,17 @@
 $(window).scroll(function() {  
-    if ($(window).width() > 992) {  
         var scroll = $(window).scrollTop();
         var banner = $('.banner').height();
-        if (scroll > (banner - 300)) {
+        if (scroll > banner) {
             $("header").addClass("sticky_header");
         } else {
             $("header").removeClass("sticky_header");
         }
-    }
 });
 jQuery(document).ready(function() {
 
-    if ($(window).width() < 992) {
-        $('header').addClass('sticky_header');
-    }
+    // if ($(window).width() < 992) {
+    //     $('header').addClass('sticky_header');
+    // }
     // Team Slider
     // Initialize Slick Slider for both content and images
     $(".slider-single").slick({
