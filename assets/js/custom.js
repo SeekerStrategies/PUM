@@ -76,3 +76,39 @@ jQuery('.read-more').each(function() {
         }
     });
 });
+
+
+var form = document.getElementById("contact__form");
+
+async function handleSubmit(event) {
+    event.preventDefault();
+    var status = document.getElementById("form__status");
+    var data = new FormData(event.target);
+    fetch(event.target.action, {
+    method: form.method,
+    body: data,
+    headers: {
+        'Accept': 'application/json'
+    }
+    }).then(response => {
+    if (response.ok) {
+        status.classList.add('success');
+        status.innerHTML = "Thanks for contacting us! We will get in touch with you shortly.";
+        form.reset()
+    } else {
+        response.json().then(data => {
+        if (Object.hasOwn(data, 'errors')) {
+            status.classList.add('error');
+            status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+        } else {
+            status.classList.add('error');
+            status.innerHTML = "Oops! There was a problem submitting your form"
+        }
+        })
+    }
+    }).catch(error => {
+      status.classList.add('error');
+      status.innerHTML = "Oops! There was a problem submitting your form"
+    });
+}
+form.addEventListener("submit", handleSubmit)

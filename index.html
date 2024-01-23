@@ -87,8 +87,7 @@
                     <div class="about-box">
                         <div class="box-content">
                             <h2 class="banner-heading" style="display: none;">We build trust, craft strategies, <span class="bordered-text">and achieve results</span></h2>
-                            <p>
-                                In 2009, veteran Texas Capitol staffers Jerry Philips and Kurt Meachum teamed up to launch Philips & Meachum Public Affairs, a public affairs and governmental relations firm based in Austin, Texas. In 2023, Jaclyn Uresti, a seasoned veteran capitol staffer, MALC President, and national political advisor, joined the firm. Philips Uresti Meachum Partners is proud to represent a range of clients, including public and private corporations, governmental and quasi-governmental entities, professional and trade associations, non-profits, and advocacy organizations.</p>
+                            <p>In 2009, veteran Texas Capitol staffers Jerry Philips and Kurt Meachum teamed up to launch Philips & Meachum Public Affairs, a public affairs and governmental relations firm based in Austin, Texas. In 2023, Jaclyn Uresti, Mexican American Legislative Caucus President, and national political advisor, joined the firm. Philips Uresti Meachum Partners is proud to represent a range of clients, including public and private corporations, governmental and quasi-governmental entities, professional and trade associations, non-profits, and advocacy organizations.</p>
                         </div>
                     </div>
                 </div>
@@ -107,8 +106,8 @@
                 </div>
                 <div class="col-lg-7 col-12 strategic-content">
                     <p>Philips Uresti Meachum Partners utilizes more than 70 years of combined legislative, political, campaign and business experience to help our clients assess risk, identify opportunity, develop strategy and effectively manage the political and public policy landscape. 
-                        <br>
-                        Our institutional knowledge of the Texas political process, and meaningful relationships with elected leaders, staff, candidates and community influencers, perfectly positions our firm to advocate and achieve results.
+                    <br><br>
+                    Our institutional knowledge of the Texas political process, and meaningful relationships with elected leaders, staff, candidates and community influencers, perfectly positions our firm to advocate and achieve results.
                     </p>
                 </div>
             </div>
@@ -240,20 +239,21 @@
                 <div class="col form-main d-flex flex-column justify-content-center">
                     <div>
                         <h2 class="secondary-heading">Contact Us</h2>
-                        <form>
+                        <form id="contact__form" action="https://formspree.io/f/xeqyeavg" method="POST">
                             <div class="form-group">
-                                <label for="fullName">Name</label>
-                                <input type="text" class="form-control" id="fullName" placeholder="Full Name">
+                                <label for="fullName">Name *</label>
+                                <input name="name" type="text" class="form-control" id="fullName" placeholder="Full Name" required>
                             </div>
                             <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" class="form-control" id="email" placeholder="Email address">
+                                <label for="email">Email *</label>
+                                <input name="email" type="email" class="form-control" id="email" placeholder="Email address" required>
                             </div>
                             <div class="form-group">
                                 <label for="message">Message *</label>
-                                <textarea class="form-control" placeholder="Tell us more about your project" id="message" rows="7" style="resize: none;"></textarea>
+                                <textarea name="message" class="form-control" placeholder="Tell us more about your project" id="message" rows="7" style="resize: none;" required></textarea>
                             </div>
                             <button type="submit" class="btn btn-primary theme-btn">Submit</button>
+                            <p id="form__status" class="form__response"></p>
                         </form>
                     </div>
                 </div>
