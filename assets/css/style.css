@@ -1162,7 +1162,7 @@ header .nav-link{
         margin-bottom: 20px;
     }
     .vision-boxes-main {
-        padding-top: 60px;
+        padding-top: 30px;
     }
     .read-more svg {
         margin-left: 6px;
@@ -1212,6 +1212,15 @@ header .nav-link{
     }
     .about-sec .history-box {
         margin: 30px auto !important;
+    }
+    .vision-box {
+        margin-bottom: 30px;
+    }
+    .vision-box ul li:last-child {
+        margin-bottom: 0;
+    }
+    .vision-box .two-column-list {
+        margin-bottom: 0;
     }
 }
 @media only screen and (max-width: 500px){
