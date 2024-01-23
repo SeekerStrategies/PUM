@@ -1,12 +1,13 @@
 $(window).scroll(function() {  
         var scroll = $(window).scrollTop();
         var banner = $('.banner').height();
-        if (scroll > banner) {
+        if (scroll > banner - 250 ) {
             $("header").addClass("sticky_header");
         } else {
             $("header").removeClass("sticky_header");
         }
 });
+
 jQuery(document).ready(function() {
 
     // if ($(window).width() < 992) {
