@@ -231,18 +231,21 @@ header .nav-link{
     line-height: 1.6;
 }
 .about-sec .history-box{
-    padding: 100px 100px 100px 134px;
-    max-width: 1140px;
+    padding: 70px;
+    max-width: 1050px;
     margin-left: auto;
     background-color: ghostwhite !important;
+}
+.about-sec .history-box p:last-child {
+    margin-bottom: 0;
 }
 .box-content{
     padding-left: 24px;
     position: relative;
 }
 .about-sec{
-    margin-top: -750px;
-    padding-top: 150px;
+    margin-top: -700px;
+    padding-top: 200px;
     z-index: 9;
     position: relative;
     overflow: hidden;
@@ -737,11 +740,11 @@ header .nav-link{
         letter-spacing: 2.5px;
         margin-bottom: 10px;
     }
-    .about-sec .history-box {
-        padding: 80px 70px 80px 84px;
-    }
     .get-in-touch{
         padding: 100px 100px 100px 100px !important;
+    }
+    .about-sec {
+        margin-top: -750px;
     }
 }
 @media only screen and (max-width:1440px){
@@ -780,7 +783,7 @@ header .nav-link{
         font-size: 20px;
     }
     .about-sec .history-box {
-        padding: 70px 70px 50px 54px;
+        padding: 60px;
     }
     .about-sec {
         margin-top: -680px;
@@ -1134,7 +1137,7 @@ header .nav-link{
         padding: 24px 0 24px 40px;
     }
     .about-sec .history-box {
-        padding: 30px 20px 20px;
+        padding: 30px 20px;
     }
     .what-we-do {
         padding: 30px 0;
