@@ -1,7 +1,9 @@
 $(window).scroll(function() {  
         var scroll = $(window).scrollTop();
         var banner = $('.banner').height();
-        if (scroll > banner - 250 ) {
+        console.log(scroll);
+        console.log(banner - 250);
+        if (scroll >= banner ) {
             $("header").addClass("sticky_header");
         } else {
             $("header").removeClass("sticky_header");

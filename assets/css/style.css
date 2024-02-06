@@ -140,23 +140,15 @@ header .nav-link{
     position: relative;
     /* background-position: center -200px; */
 }
-.banner-heading{
-    /* max-width: 908px;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 100px;
-    line-height: 108px; */
-    max-width: 858px;
+.banner-heading {
+    max-width: 670px;
     font-weight: 800;
     z-index: 2;
     position: relative;
-    font-size: 76px;
-    line-height: 83px;
-    letter-spacing: 0.02em;
-    text-transform: uppercase;
+    font-size: 46px;
+    line-height: 56px;
     color: #ffffff;
     margin-bottom: 30px;
-    /* color: #F2F3F5; */
 }
 .bordered-text{
     color: transparent;
@@ -767,8 +759,8 @@ header .nav-link{
     }
     .banner-heading {
         max-width: 748px;
-        font-size: 56px;
-        line-height: 66px;
+        font-size: 40px;
+        line-height: 50px;
     }
     .vision-box ul li, .vision-box p{
         line-height: 28px;
@@ -979,6 +971,8 @@ header .nav-link{
         display: block !important;
         color: #212529;
         margin-bottom: 10px;
+        font-size: 32px;
+        line-height: 42px;
     }
     .about-box .banner-heading .bordered-text {
         -webkit-text-stroke-color: #212529;
@@ -1215,6 +1209,10 @@ header .nav-link{
     }
     .vision-box .two-column-list {
         margin-bottom: 0;
+    }
+    .about-box .banner-heading {
+        font-size: 28px;
+        line-height: 38px;
     }
 }
 @media only screen and (max-width: 500px){
